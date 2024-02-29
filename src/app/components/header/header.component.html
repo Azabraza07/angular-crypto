@@ -1,0 +1,25 @@
+<div class="p-5">
+  <div class="flex justify-between">
+    <div class="logo">
+      <a routerLink="">Logo</a>
+    </div>
+    <nav class="gap-5 flex">
+      <a
+        routerLink=""
+        routerLinkActive="text-white/50"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Home</a
+      >
+      <a
+        routerLink="profile"
+        routerLinkActive= "text-white/50"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Profile</a
+      >
+
+      <button>
+        <fa-icon [icon]="icon"></fa-icon>
+      </button>
+    </nav>
+  </div>
+</div>

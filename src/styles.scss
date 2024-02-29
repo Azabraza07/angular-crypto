@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background: rgba($color: #000000, $alpha: 0.8);
+    color: white;
+}
+
