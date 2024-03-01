@@ -3,7 +3,7 @@
     <div class="logo">
       <a routerLink="">Logo</a>
     </div>
-    <nav class="gap-5 flex">
+    <nav *ngIf="isAuth; else isNotAuth" class="gap-5 flex">
       <a
         routerLink=""
         routerLinkActive="text-white/50"
@@ -12,7 +12,7 @@
       >
       <a
         routerLink="profile"
-        routerLinkActive= "text-white/50"
+        routerLinkActive="text-white/50"
         [routerLinkActiveOptions]="{ exact: true }"
         >Profile</a
       >
@@ -21,5 +21,12 @@
         <fa-icon [icon]="icon"></fa-icon>
       </button>
     </nav>
+
+    <ng-template #isNotAuth>
+        <div class="flex gap-5">
+            <a routerLink="signUp">Sign Up</a>
+            <a routerLink="login">Login</a>
+        </div>
+    </ng-template>
   </div>
 </div>

@@ -7,6 +7,6 @@ import { faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  aut:boolean = false
+  isAuth:boolean = false
   icon = faArrowRightFromBracket
 }

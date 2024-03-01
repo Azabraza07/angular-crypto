@@ -3,15 +3,15 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.scss',
+  selector: 'app-signup',
+  templateUrl: './signup.component.html',
+  styleUrl: './signup.component.scss'
 })
-export class LoginComponent {
-  loginForm: FormGroup;
+export class SignupComponent {
+  signUp: FormGroup;
 
   constructor(private readonly authService: AuthService) {
-    this.loginForm = new FormGroup({
+    this.signUp = new FormGroup({
       email: new FormControl('', [Validators.email, Validators.required]),
       password: new FormControl('', [
         Validators.required,
@@ -21,8 +21,8 @@ export class LoginComponent {
   }
 
   submitForm() {
-    if (this.loginForm.valid) {
-      this.authService.signUp(this.loginForm.value)
+    if (this.signUp.valid) {
+      this.authService.signUp(this.signUp.value)
     } else {
       console.log('not valied')
     }
